@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestsManager", "RequestsManager\RequestsManager.csproj", "{15A61BB5-D880-4294-B8CD-40FA0E345880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestsManager.Model", "RequestsManager.Model\RequestsManager.Model.csproj", "{28DDFC31-316C-43A2-9710-41DF3CA0FE78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestsManager.Repository", "RequestsManager.Repository\RequestsManager.Repository.csproj", "{A7290508-F05B-40DC-BE1E-CC84DF62833E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15A61BB5-D880-4294-B8CD-40FA0E345880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A61BB5-D880-4294-B8CD-40FA0E345880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A61BB5-D880-4294-B8CD-40FA0E345880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A61BB5-D880-4294-B8CD-40FA0E345880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28DDFC31-316C-43A2-9710-41DF3CA0FE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28DDFC31-316C-43A2-9710-41DF3CA0FE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28DDFC31-316C-43A2-9710-41DF3CA0FE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28DDFC31-316C-43A2-9710-41DF3CA0FE78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7290508-F05B-40DC-BE1E-CC84DF62833E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7290508-F05B-40DC-BE1E-CC84DF62833E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7290508-F05B-40DC-BE1E-CC84DF62833E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7290508-F05B-40DC-BE1E-CC84DF62833E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

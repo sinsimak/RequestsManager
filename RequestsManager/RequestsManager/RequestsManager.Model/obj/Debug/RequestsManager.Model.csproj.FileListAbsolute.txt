@@ -1,0 +1,4 @@
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Model\bin\Debug\RequestsManager.Model.dll
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Model\bin\Debug\RequestsManager.Model.pdb
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Model\obj\Debug\RequestsManager.Model.dll
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Model\obj\Debug\RequestsManager.Model.pdb

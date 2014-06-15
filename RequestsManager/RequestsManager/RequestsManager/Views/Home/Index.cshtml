@@ -1,0 +1,136 @@
+﻿@model RequestsManager.Model.Request
+@{
+    ViewBag.Title = "Home Page";
+}
+<h3>Размещение заявок</h3>
+<form method="POST" id="requestForm" action="javascript:void(null);" onsubmit="validateAjaxForm()">
+    <div class="row">
+        <div class="span3">
+            <input type="text" class="input-medium validate[required]" value="" id="customer" name="customer" placeholder="Клиент"/>    
+        </div>
+        <div class="span3">
+            <div class="controls input-append date form_datetime" data-date="" data-date-format="dd MM yyyy - HH:ii p" 		data-link-field="dtp_input1">
+	            <input size="16" class="validate[required]" type="text" value="" name="orderDate" readonly placeholder="Дата и время заказа">
+	            <span class="add-on"><i class="icon-remove"></i></span>
+	            <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+        </div>
+        <div class="span3">
+            <input type="text" class="input-medium validate[required, custom[onlyNumberSp]]" value="" id="countPeople" name="countPeople" placeholder="Количество человек"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span8">
+            <textarea rows="5" cols="300" name="comment" id="comment" placeholder="Комментарий"></textarea>
+        </div>
+    </div>
+
+    <input type="submit" id="save" class="btn btn-success" value="Сохранить заявку"/>
+</form>
+<div id="resultOperation" style="display: none">
+    <p>Заявка успешно сохранена</p>
+</div>
+<h3>Список заявок</h3>
+
+<script id="requestsTemplate" type="text/x-jsrender">
+	<tr>
+        <td>
+            {{>Customer}}
+        </td>
+        <td>
+            {{>~format(OrderDate)}}
+        </td>
+        <td>
+            {{>CountPeople}}
+        </td>
+        <td>
+            {{>Comment}}
+        </td>
+
+	</tr>
+</script>
+
+<table class="table table-striped" >
+    <thead>
+        <tr>
+            <th>Клиент</th>
+            <th>Дата заказа</th>
+            <th>Количество заявок</th>
+            <th>Комментарий</th>            
+        </tr>
+    </thead>
+    <tbody id="requestList"></tbody>
+</table>
+
+<script>
+    $.views.helpers({
+        format: function (date) {
+            var currentDateTime = new Date(date);
+            var year = currentDateTime.getFullYear();
+            var month = currentDateTime.getMonth() + 1;
+            var currentDate = currentDateTime.getDate();
+
+            return currentDate + "." + month + "." + year;
+        }
+    });
+
+
+    function getRequests() {
+        var getRequestsUrl = "DataService/GetRequests";
+
+        $.ajax({
+            type: "POST",
+            url: getRequestsUrl,
+            success: function (data) {
+                var templateData = JSON.parse(data);
+                $("#requestList").html(
+                    $("#requestsTemplate").render(templateData)
+                );
+            },
+            error: function (xhr, str) {
+                alert('Возникла ошибка: ' + xhr.responseCode);
+            }
+        });
+    }
+
+    function saveRequest() {
+        var msg = $("#requestForm").serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: 'DataService/SaveRequest',
+            data: msg,
+            success: function (data) {
+                $('#resultOperation').show(2000);
+                $('#customer').val('');
+                $('#orderDate').val('');
+                $('#countPeople').val('');
+                $('#comment').val('');
+                $('#resultOperation').hide(2000);
+            },
+            error: function (xhr, str) {
+                alert('Возникла ошибка: ' + xhr.responseCode);
+            }
+        });
+    }
+
+    function validateAjaxForm() {
+        var valid = $("#requestForm").validationEngine('validate');
+        if (valid == true) {
+            saveRequest();
+        }
+    }
+
+    $(document).ready(function () {
+        $('.form_datetime').datetimepicker({
+            language: 'ru',
+            format: 'dd.mm.yyyy hh:ii'
+        });
+
+        $("#requestForm").validationEngine();
+
+        setInterval(getRequests, 60000);
+    });
+
+</script>

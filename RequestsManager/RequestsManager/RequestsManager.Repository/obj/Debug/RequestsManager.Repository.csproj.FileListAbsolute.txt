@@ -1,0 +1,12 @@
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\RequestsManager.Repository.dll.config
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\RequestsManager.Repository.dll
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\RequestsManager.Repository.pdb
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\EntityFramework.dll
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\EntityFramework.SqlServer.dll
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\RequestsManager.Model.dll
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\RequestsManager.Model.pdb
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\EntityFramework.xml
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\bin\Debug\EntityFramework.SqlServer.xml
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\obj\Debug\RequestsManager.Repository.csprojResolveAssemblyReference.cache
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\obj\Debug\RequestsManager.Repository.dll
+G:\GitRepositories\RequestsManager\RequestsManager\RequestsManager\RequestsManager.Repository\obj\Debug\RequestsManager.Repository.pdb
